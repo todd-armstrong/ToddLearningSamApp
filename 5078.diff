@@ -1,0 +1,14 @@
+diff --git a/samcli/lib/pipeline/bootstrap/stage_resources.yaml b/samcli/lib/pipeline/bootstrap/stage_resources.yaml
+index 23677bb847..6ce3b37c6b 100644
+--- a/samcli/lib/pipeline/bootstrap/stage_resources.yaml
++++ b/samcli/lib/pipeline/bootstrap/stage_resources.yaml
+@@ -231,6 +231,9 @@ Resources:
+     DeletionPolicy: "Retain"
+     Properties:
+       AccessControl: "LogDeliveryWrite"
++      OwnershipControls:
++        Rules:
++          - ObjectOwnership:  ObjectWriter
+       Tags:
+         - Key: ManagedStackSource
+           Value: AwsSamCli
